@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="520" viewBox="0 0 640 520" role="img" aria-labelledby="t"><title id="t">Illustration of a calm, light-filled clinic room</title>
+<rect width="640" height="520" fill="#F3EAE1"/>
+<path d="M330 420V180c0-66 54-120 120-120s120 54 120 120v240z" fill="#E3E9DD"/>
+<path d="M450 60v360M330 250h240" stroke="#FBF7F2" stroke-width="10"/>
+<circle cx="520" cy="130" r="26" fill="#F4DFD6"/>
+<rect x="0" y="420" width="640" height="100" fill="#E6D8CB"/>
+<rect x="70" y="300" width="210" height="70" rx="22" fill="#6E3B61"/><rect x="58" y="350" width="234" height="44" rx="18" fill="#4A2541"/><rect x="80" y="394" width="10" height="30" fill="#4A2541"/><rect x="260" y="394" width="10" height="30" fill="#4A2541"/>
+<circle cx="135" cy="340" r="18" fill="#F4DFD6"/>
+<path d="M560 420v-60h40v60z" fill="#984A37"/><g fill="#5E7356"><path d="M580 362c-10-40-40-60-60-62 2 30 30 56 60 62z"/><path d="M580 362c6-46 30-72 52-78 2 34-22 66-52 78z"/><path d="M580 362c-2-50 6-80 18-96 12 30 4 70-18 96z"/></g>
+<g stroke="#2B2130" stroke-width="3" fill="none" opacity=".35"><path d="M180 80c0 40 0 60 0 120"/></g><path d="M150 200h60l-12 40h-36z" fill="#E9C3B4"/>
+</svg>

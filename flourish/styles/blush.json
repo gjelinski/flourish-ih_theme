@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Blush",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "base", "name": "Linen", "color": "#FFF9F6" },
+				{ "slug": "base-2", "name": "Sand", "color": "#FBEDE7" },
+				{ "slug": "white", "name": "White", "color": "#FFFFFF" },
+				{ "slug": "contrast", "name": "Ink", "color": "#33212A" },
+				{ "slug": "muted", "name": "Dusk", "color": "#6E5A62" },
+				{ "slug": "primary", "name": "Plum", "color": "#9A4458" },
+				{ "slug": "primary-dark", "name": "Deep Plum", "color": "#5C2536" },
+				{ "slug": "secondary", "name": "Sage", "color": "#5E7356" },
+				{ "slug": "secondary-light", "name": "Pale Sage", "color": "#E8EDE3" },
+				{ "slug": "accent", "name": "Clay", "color": "#984A37" },
+				{ "slug": "accent-light", "name": "Blush", "color": "#F8DCD3" }
+			],
+			"gradients": [
+				{ "slug": "dawn", "name": "Dawn", "gradient": "linear-gradient(160deg, #F8DCD3 0%, #FFF9F6 60%, #FBEDE7 100%)" },
+				{ "slug": "dusk", "name": "Dusk", "gradient": "linear-gradient(160deg, #9A4458 0%, #5C2536 100%)" }
+			]
+		}
+	}
+}
