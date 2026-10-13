@@ -9,8 +9,8 @@
  * Viewport Width: 1400
  */
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|20"}},"gradient":"dawn","layout":{"type":"constrained","contentSize":"760px"}} -->
-<div class="wp-block-group alignfull has-dawn-gradient-background has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:paragraph {"align":"center","className":"is-style-flourish-eyebrow"} -->
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|20"}},"backgroundColor":"blush","layout":{"type":"constrained","contentSize":"760px"}} -->
+<div class="wp-block-group alignfull has-blush-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:paragraph {"align":"center","className":"is-style-flourish-eyebrow"} -->
 <p class="has-text-align-center is-style-flourish-eyebrow">Contact</p>
 <!-- /wp:paragraph -->
 
@@ -18,8 +18,8 @@
 <h1 class="wp-block-heading has-text-align-center has-xx-large-font-size">We'd love to hear from you</h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","className":"is-style-flourish-lead","textColor":"muted"} -->
-<p class="has-text-align-center is-style-flourish-lead has-muted-color has-text-color">Join the waitlist, ask a question, or let us know how we can support you.</p>
+<!-- wp:paragraph {"align":"center","className":"is-style-flourish-lead","textColor":"clay-text"} -->
+<p class="has-text-align-center is-style-flourish-lead has-clay-text-color has-text-color">Join the waitlist, ask a question, or let us know how we can support you.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -29,8 +29,8 @@
 <h2 class="wp-block-heading has-x-large-font-size">Join the waitlist</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textColor":"muted"} -->
-<p class="has-muted-color has-text-color">Add your contact form here (for example with WPForms, Gravity Forms or Jetpack Forms). Please don't ask for detailed health information through a website form — collect only what you need to contact the patient.</p>
+<!-- wp:paragraph {"textColor":"clay-text"} -->
+<p class="has-clay-text-color has-text-color">Add your contact form here (for example with WPForms, Gravity Forms or Jetpack Forms). Please don't ask for detailed health information through a website form — collect only what you need to contact the patient.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

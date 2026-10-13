@@ -81,18 +81,18 @@ function flourish_register_block_styles() {
 			'flourish-card' => __( 'Card', 'flourish' ),
 		),
 		'core/image'        => array(
-			'flourish-arch'    => __( 'Arch', 'flourish' ),
-			'flourish-organic' => __( 'Organic', 'flourish' ),
+			'flourish-arch' => __( 'Arch', 'flourish' ),
 		),
 		'core/cover'        => array(
 			'flourish-rounded' => __( 'Rounded', 'flourish' ),
 		),
 		'core/heading'      => array(
-			'flourish-eyebrow' => __( 'Eyebrow', 'flourish' ),
+			'flourish-eyebrow' => __( 'Subheader (Poppins caps)', 'flourish' ),
 		),
 		'core/paragraph'    => array(
-			'flourish-eyebrow' => __( 'Eyebrow', 'flourish' ),
+			'flourish-eyebrow' => __( 'Subheader (Poppins caps)', 'flourish' ),
 			'flourish-lead'    => __( 'Lead', 'flourish' ),
+			'flourish-accent'  => __( 'Accent (Cormorant italic)', 'flourish' ),
 		),
 		'core/list'         => array(
 			'flourish-checks' => __( 'Checkmarks', 'flourish' ),
@@ -101,7 +101,7 @@ function flourish_register_block_styles() {
 			'flourish-soft' => __( 'Soft', 'flourish' ),
 		),
 		'core/separator'    => array(
-			'flourish-sprig' => __( 'Sprig', 'flourish' ),
+			'flourish-monogram' => __( 'Monogram', 'flourish' ),
 		),
 	);
 

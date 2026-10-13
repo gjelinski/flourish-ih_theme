@@ -9,8 +9,8 @@
  * Viewport Width: 1400
  */
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|20"}},"gradient":"dawn","layout":{"type":"constrained","contentSize":"760px"}} -->
-<div class="wp-block-group alignfull has-dawn-gradient-background has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:paragraph {"align":"center","className":"is-style-flourish-eyebrow"} -->
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|20"}},"backgroundColor":"blush","layout":{"type":"constrained","contentSize":"760px"}} -->
+<div class="wp-block-group alignfull has-blush-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:paragraph {"align":"center","className":"is-style-flourish-eyebrow"} -->
 <p class="has-text-align-center is-style-flourish-eyebrow">Services</p>
 <!-- /wp:paragraph -->
 
@@ -18,8 +18,8 @@
 <h1 class="wp-block-heading has-text-align-center has-xx-large-font-size">Care for every stage, all in one place</h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","className":"is-style-flourish-lead","textColor":"muted"} -->
-<p class="has-text-align-center is-style-flourish-lead has-muted-color has-text-color">From preventive care to menopause, our integrated team works together on a plan that fits your body, your goals and your life.</p>
+<!-- wp:paragraph {"align":"center","className":"is-style-flourish-lead","textColor":"clay-text"} -->
+<p class="has-text-align-center is-style-flourish-lead has-clay-text-color has-text-color">From perimenopause to post-menopause, our integrated team works together on a plan that fits your body, your goals and your life.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -123,41 +123,41 @@
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Pregnancy and postpartum recovery</li>
+<li>Pelvic health through perimenopause and beyond</li>
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"anchor":"fertility","className":"is-style-flourish-card","style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div id="fertility" class="wp-block-group is-style-flourish-card"><!-- wp:image {"width":"56px","height":"56px","sizeSlug":"full","linkDestination":"none","className":"flourish-icon"} -->
-<figure class="wp-block-image size-full is-resized flourish-icon"><img src="<?php echo flourish_image( 'icon-fertility.svg' ); ?>" alt="" style="width:56px;height:56px"/></figure>
+<!-- wp:group {"anchor":"metabolic-health","className":"is-style-flourish-card","style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div id="metabolic-health" class="wp-block-group is-style-flourish-card"><!-- wp:image {"width":"56px","height":"56px","sizeSlug":"full","linkDestination":"none","className":"flourish-icon"} -->
+<figure class="wp-block-image size-full is-resized flourish-icon"><img src="<?php echo flourish_image( 'icon-sprout.svg' ); ?>" alt="" style="width:56px;height:56px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":2,"fontSize":"x-large"} -->
-<h2 class="wp-block-heading has-x-large-font-size">Fertility, pregnancy &amp; postpartum</h2>
+<h2 class="wp-block-heading has-x-large-font-size">Bone, heart &amp; metabolic health</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Support from planning a pregnancy through the fourth trimester.</p>
+<p>Staying strong and well as your hormones change.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"className":"is-style-flourish-checks"} -->
 <ul class="wp-block-list is-style-flourish-checks">
 <!-- wp:list-item -->
-<li>Preconception planning</li>
+<li>Bone density assessment and fracture prevention</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Fertility assessment and referral</li>
+<li>Heart health and blood pressure</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Prenatal care coordination</li>
+<li>Blood sugar, weight and metabolism</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Postpartum check-ins and lactation support</li>
+<li>Personalised screening plans</li>
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list --></div>
@@ -183,7 +183,7 @@
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Perinatal and postpartum mental health</li>
+<li>Midlife stress, burnout and sleep</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
@@ -221,7 +221,7 @@
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Nutrition for pregnancy and menopause</li>
+<li>Nutrition for perimenopause and menopause</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->

@@ -30,12 +30,12 @@
 <h3 class="wp-block-heading has-text-align-center has-large-font-size" style="margin-top:var(--wp--preset--spacing--20)">Dr. Firstname Lastname</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small","style":{"typography":{"fontWeight":"600"}}} -->
-<p class="has-text-align-center has-secondary-color has-text-color has-small-font-size" style="font-weight:600">Family Physician, Medical Director</p>
+<!-- wp:paragraph {"align":"center","textColor":"clay-text","fontSize":"small","style":{"typography":{"fontWeight":"600"}}} -->
+<p class="has-text-align-center has-clay-text-color has-text-color has-small-font-size" style="font-weight:600">Family Physician, Medical Director</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"align":"center","textColor":"muted","fontSize":"small"} -->
-<p class="has-text-align-center has-muted-color has-text-color has-small-font-size">Menopause care, contraception and preventive health.</p>
+<!-- wp:paragraph {"align":"center","textColor":"clay-text","fontSize":"small"} -->
+<p class="has-text-align-center has-clay-text-color has-text-color has-small-font-size">Menopause care and preventive health.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -48,12 +48,12 @@
 <h3 class="wp-block-heading has-text-align-center has-large-font-size" style="margin-top:var(--wp--preset--spacing--20)">Firstname Lastname, NP</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small","style":{"typography":{"fontWeight":"600"}}} -->
-<p class="has-text-align-center has-secondary-color has-text-color has-small-font-size" style="font-weight:600">Nurse Practitioner</p>
+<!-- wp:paragraph {"align":"center","textColor":"clay-text","fontSize":"small","style":{"typography":{"fontWeight":"600"}}} -->
+<p class="has-text-align-center has-clay-text-color has-text-color has-small-font-size" style="font-weight:600">Nurse Practitioner</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"align":"center","textColor":"muted","fontSize":"small"} -->
-<p class="has-text-align-center has-muted-color has-text-color has-small-font-size">Sexual and reproductive health, primary care.</p>
+<!-- wp:paragraph {"align":"center","textColor":"clay-text","fontSize":"small"} -->
+<p class="has-text-align-center has-clay-text-color has-text-color has-small-font-size">Primary care and sexual health.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -66,12 +66,12 @@
 <h3 class="wp-block-heading has-text-align-center has-large-font-size" style="margin-top:var(--wp--preset--spacing--20)">Firstname Lastname, PT</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small","style":{"typography":{"fontWeight":"600"}}} -->
-<p class="has-text-align-center has-secondary-color has-text-color has-small-font-size" style="font-weight:600">Pelvic Health Physiotherapist</p>
+<!-- wp:paragraph {"align":"center","textColor":"clay-text","fontSize":"small","style":{"typography":{"fontWeight":"600"}}} -->
+<p class="has-text-align-center has-clay-text-color has-text-color has-small-font-size" style="font-weight:600">Pelvic Health Physiotherapist</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"align":"center","textColor":"muted","fontSize":"small"} -->
-<p class="has-text-align-center has-muted-color has-text-color has-small-font-size">Pregnancy, postpartum and pelvic pain.</p>
+<!-- wp:paragraph {"align":"center","textColor":"clay-text","fontSize":"small"} -->
+<p class="has-text-align-center has-clay-text-color has-text-color has-small-font-size">Pelvic floor health and pelvic pain.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -84,12 +84,12 @@
 <h3 class="wp-block-heading has-text-align-center has-large-font-size" style="margin-top:var(--wp--preset--spacing--20)">Firstname Lastname, RPsych</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small","style":{"typography":{"fontWeight":"600"}}} -->
-<p class="has-text-align-center has-secondary-color has-text-color has-small-font-size" style="font-weight:600">Registered Psychologist</p>
+<!-- wp:paragraph {"align":"center","textColor":"clay-text","fontSize":"small","style":{"typography":{"fontWeight":"600"}}} -->
+<p class="has-text-align-center has-clay-text-color has-text-color has-small-font-size" style="font-weight:600">Registered Psychologist</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"align":"center","textColor":"muted","fontSize":"small"} -->
-<p class="has-text-align-center has-muted-color has-text-color has-small-font-size">Perinatal mental health, anxiety and life transitions.</p>
+<!-- wp:paragraph {"align":"center","textColor":"clay-text","fontSize":"small"} -->
+<p class="has-text-align-center has-clay-text-color has-text-color has-small-font-size">Anxiety, mood and life transitions.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 </div>

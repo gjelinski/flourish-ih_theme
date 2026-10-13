@@ -1,6 +1,6 @@
 # Flourish Integrated Health — WordPress theme
 
-A responsive block theme (Gutenberg / full site editing) for **Flourish Integrated Health**, a women's health clinic opening in Edmonton, Alberta in Fall 2027.
+The official responsive block theme (Gutenberg / full site editing) for **Flourish Integrated Health**, a women's health clinic opening in Edmonton, Alberta in Fall 2027. It is built on the **Flourish Brand Style Guide (2026, Explora Creative)**.
 
 | Desktop | Mobile | Mobile menu |
 |---|---|---|
@@ -9,50 +9,51 @@ A responsive block theme (Gutenberg / full site editing) for **Flourish Integrat
 ## Install (WordPress Admin)
 
 1. Download **[`dist/flourish.zip`](dist/flourish.zip)**.
-2. In WordPress go to **Appearance → Themes → Add New Theme → Upload Theme**, choose `flourish.zip`, click **Install Now**, then **Activate**.
-3. Go to **Settings → Permalinks** and choose **Post name** (the starter menu links use `/services/`, `/about/` and so on).
-4. Create the pages **Services**, **Our Team**, **About**, **Resources** and **Contact**. For each one, open the block inserter → **Patterns → Flourish: Full pages** and insert the matching page pattern. For pages built entirely from patterns, choose the **Landing Page (no title, full width)** template.
-5. Upload your logo in **Appearance → Editor → Patterns → Header** (Site Logo block), or under **Settings → General → Site Icon**.
-6. Edit the menus, footer, hours, address and the announcement bar in **Appearance → Editor**.
+2. Go to **Appearance → Themes → Add New Theme → Upload Theme**, choose `flourish.zip`, click **Install Now**, then **Activate**.
+3. Go to **Settings → Permalinks** and choose **Post name**.
+4. Upload **[`docs/brand-assets/site-icon-512.png`](docs/brand-assets/site-icon-512.png)** as the site icon (favicon): **Appearance → Editor → Styles** or **Settings → General → Site Icon**. It is the guide's icon: the Earth monogram on a Dune circle.
+5. Create the pages **Services**, **Our Team**, **About**, **Resources** and **Contact**. In each one, open the inserter → **Patterns → Flourish: Full pages**, insert the matching layout, and choose the **Landing Page (no title, full width)** template.
+6. Edit the menus, hours, address and announcement bar in **Appearance → Editor**.
 
-To rebuild the zip after changing files: `bin/build-zip.sh`.
+To rebuild the zip after changing files, run `bin/build-zip.sh`.
 
-## Brand guideline status
+## How the brand guide is applied
 
-**No brand guideline file reached this project.** The design system below is a placeholder built for a modern women's health clinic. Every brand value lives in `flourish/theme.json`, so applying the official guideline is a small edit:
+### Colours (guide p. 16–17)
 
-| What to change | Where |
-|---|---|
-| Brand colours | `theme.json → settings.color.palette` (keep the slugs and change the hex values). Also update the hex values in `styles/*.json` and the colours in `assets/images/*.svg` |
-| Fonts | Put the `.woff2` files in `assets/fonts/` and update `settings.typography.fontFamilies` |
-| Corner radius, line heights | `settings.custom` |
-| Type scale and spacing | `settings.typography.fontSizes`, `settings.spacing.spacingSizes` |
-
-Most of these can also be changed without code in **Appearance → Editor → Styles**.
-
-## Design system (placeholder)
-
-**Concept:** growth, warmth and calm. Soft arches and botanical forms suggest opening and flourishing. The plum and sage pairing reads as caring and clinical without the usual "medical blue".
-
-| Role | Name | Hex |
+| Name | Hex | Used for (per the colour-proportion guidance) |
 |---|---|---|
-| Background | Linen | `#FBF7F2` |
-| Alt background | Sand | `#F3EAE1` |
-| Text | Ink | `#2B2130` |
-| Secondary text | Dusk | `#6A5F6C` |
-| Primary / buttons | Plum | `#6E3B61` |
-| Headings, footer | Deep Plum | `#4A2541` |
-| Secondary | Sage | `#5E7356` |
-| Tint | Pale Sage | `#E3E9DD` |
-| Accent (labels) | Clay | `#984A37` |
-| Tint | Blush | `#F4DFD6` |
+| Pearl | `#FBFBF9` | Main page background |
+| Blush | `#F2E6D8` | Main background: page headers, CTA panel, mobile menu |
+| Cream | `#F7F0E8` | Secondary background: values bar |
+| Dune | `#E5CDB5` | Secondary background: footer, mission section, icon circles |
+| Terra | `#D9B595` | Buttons |
+| Clay | `#A69486` | Logo in the main menu, hairlines, form borders |
+| Earth | `#422921` | Text, headings, announcement bar, small details |
+| White | `#FFFFFF` | Cards |
 
-Text and background pairings meet WCAG 2.1 AA contrast.
+**Accessibility note:** Terra and Clay are too light for small text on the brand backgrounds (about 1.8:1 and 2.8:1 contrast; WCAG asks for 4.5:1). The theme keeps them for backgrounds, buttons, icons and the logo, as the guide intends. For small text it adds two darker tints: **Clay — text** `#665548` and **Terra — text** `#7D5F44` (the Poppins caps subheaders). All text meets WCAG AA. Buttons use Earth text on Terra (7:1), matching the guide's website mock-up.
 
-- **Typography:** *Fraunces* (soft serif) for headings and *Figtree* (humanist sans) for body text. Both are self-hosted, with no Google Fonts requests, which matters for patient privacy.
-- **Style variations:** Default (Plum & Linen), **Sage** and **Blush**. Switch them in **Editor → Styles**.
-- **Responsive:** fluid type and spacing (`clamp()`), auto-fitting grids, columns that stack below 782px, a sticky header and a full-screen mobile menu. Tested at 1440px and 390px with no horizontal scrolling.
-- **Accessibility:** visible focus rings, semantic landmarks (header, main, footer), alt text on informative images, decorative icons hidden from screen readers, and `prefers-reduced-motion` support.
+### Typography (guide p. 21–22)
+
+- **Marcellus** for headings.
+- **Poppins** for subheaders (uppercase, letter-spaced), body text, navigation and buttons.
+- **Cormorant Garamond Italic** for quotes and special moments only. Use the **Accent** paragraph style or the Quote block, and pair it with Poppins, never with a Marcellus heading in the same composition.
+- All three fonts are bundled in the theme. The site makes no requests to Google Fonts, which helps patient privacy.
+
+### Logos (guide p. 4–14)
+
+All six logo forms were taken as vector artwork directly from the guide's PDF: primary, wordmark, brand mark, monogram, lettermark and text mark. Each comes in Earth, Clay and White, in `flourish/assets/images/logo/` and `docs/brand-assets/logos/`.
+
+- **Header:** the primary logo in Clay, as in the guide's website example.
+- **Footer:** the primary logo in Earth on Dune, plus the "A space to flourish" text mark as a sign-off.
+- **Decoration:** the wordmark appears as a faint watermark (the guide's "subtle background graphic"), and the monogram is available as a separator style.
+- The logos are only ever scaled by width, never stretched, and never given shadows or effects.
+
+### Look and voice (guide p. 2)
+
+- **Look:** premium, minimal, peaceful and earthy. That means flat colour with no gradients, square buttons and cards, and hairline borders.
+- **Copy:** uses the guide's own phrases: "Make sense of what's going on with your health", "Supporting women in midlife and beyond", "Book your session", "Figuring this out together" and "A space to flourish".
 
 ## What's included
 
@@ -61,25 +62,33 @@ flourish/
 ├── style.css, theme.json, functions.php, readme.txt, screenshot.png
 ├── templates/   front-page, home, index, single, page, archive, search, 404,
 │                page-landing (no title), page-sidebar-cta (sticky booking card)
-├── parts/       header (sticky + mobile menu), footer, announcement bar
-├── patterns/    hero, trust-bar, services-grid, welcome-split, approach-steps,
-│                mission-quote, team-grid, faq, location-hours, cta-waitlist,
-│                page-header, post-grid + full pages: home, services, about, contact
-├── styles/      sage.json, blush.json
-└── assets/      css/theme.css, fonts/ (Fraunces, Figtree + OFL licences), images/ (SVG illustrations + icons)
+├── parts/       header, footer, announcement bar
+├── patterns/    header, footer, hero, trust-bar, services-grid, welcome-split,
+│                approach-steps, mission-quote, team-grid, faq, location-hours,
+│                cta-waitlist, page-header, post-grid + full pages: home, services, about, contact
+└── assets/      css/theme.css, fonts/ (Marcellus, Poppins, Cormorant + OFL licences),
+                 images/ (logo/ suite, icons, placeholder illustrations)
+docs/brand-assets/   logo SVGs + site-icon-512.png
 ```
 
-**Block styles** (in the block sidebar under *Styles*): Card, Rounded panel (Group); Arch, Organic (Image); Eyebrow, Lead (Paragraph/Heading); Checkmarks (List); Soft (Button); Sprig (Separator).
+**Block styles** (in the block sidebar under *Styles*):
+- Group: Card, Rounded panel
+- Image: Arch
+- Paragraph and Heading: Subheader (Poppins caps), Lead, Accent (Cormorant italic)
+- List: Checkmarks
+- Button: Soft
+- Separator: Monogram
 
 ## Before launch: content to replace
 
-- `[Street address]`, `[Postal code]`, `780-000-0000` and `hello@example.com` (footer, Location pattern, CTA).
-- Practitioner names and photos (Care Team pattern), the hours, and the social media links.
-- The map placeholder on the Contact page. Use an Embed or Custom HTML block.
-- **Contact or waitlist form:** add one with a form plugin. Don't collect health details through website forms. Alberta's *Health Information Act* applies to clinic records.
-- **Land acknowledgement** (footer): starter wording for Treaty 6 territory. Please have the clinic confirm the final wording.
-- **Advertising rules:** CPSA (College of Physicians & Surgeons of Alberta) advertising standards restrict patient testimonials, so the theme uses a mission statement instead. Have the clinic review service claims before launch.
+- **Photography:** the hero, welcome and team images are illustrated placeholders. Replace them with photos in the guide's style ("peaceful, reflective, slightly lived-in").
+- **Contact details:** `[Street address]`, `[Postal code]`, `780-000-0000`, `hello@example.com`, hours and social links.
+- **Content:** practitioner names and photos, and the service details. The service list is a placeholder aimed at midlife care.
+- **Map:** add an Embed or Custom HTML block on the Contact page.
+- **Contact or waitlist form:** add one with a form plugin, and don't collect health details through it. Alberta's *Health Information Act* applies.
+- **Land acknowledgement:** the footer has starter Treaty 6 wording. Please have the clinic confirm it.
+- **Testimonials:** the guide shows a "Kind words" patient testimonial. However, CPSA (College of Physicians & Surgeons of Alberta) advertising standards restrict testimonials for physician services, so the theme uses a mission statement in the same style. Confirm with the clinic before adding any testimonials.
 
 ## Compatibility
 
-Requires WordPress 6.7+ and PHP 7.4+, using `theme.json` schema v3. Before release it was tested by installing `flourish.zip` through WordPress's theme installer on a current WordPress 7.x development build. Every pattern, template and template part passes the block editor's validator, so none of them show "unexpected content" warnings.
+Requires WordPress 6.7+ and PHP 7.4+, using `theme.json` schema v3. It was tested by installing `flourish.zip` through WordPress's theme installer on a WordPress 7.x development build. Every pattern, template and template part passes the block editor's validator, and pages have no horizontal scrolling at 390px or 1440px.

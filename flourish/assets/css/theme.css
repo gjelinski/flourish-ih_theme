@@ -1,6 +1,13 @@
 /**
  * Flourish Integrated Health — enhancements beyond theme.json.
  * Loaded on the front end and in the block editor.
+ *
+ * Brand rules applied here (Brand Style Guide 2026):
+ * - Marcellus for headings, Poppins for subheaders/body, Cormorant Garamond
+ *   Italic only for quotes and special moments (never paired with Marcellus).
+ * - Pearl/Blush backgrounds, Dune/Cream secondary, Terra/Clay for buttons and
+ *   icons, Earth for text and small details.
+ * - Minimal and premium: square corners, no heavy shadows or gradients.
  */
 
 /* ---------- Base ---------- */
@@ -16,13 +23,11 @@ body {
 }
 
 ::selection {
-	background: var(--wp--preset--color--accent-light);
-	color: var(--wp--preset--color--contrast);
+	background: var(--wp--preset--color--dune);
+	color: var(--wp--preset--color--earth);
 }
 
-/* Fraunces looks best with a little optical softness at display sizes. */
-h1, h2, h3, .wp-block-site-title {
-	font-variation-settings: "SOFT" 50;
+h1, h2, h3 {
 	text-wrap: balance;
 }
 
@@ -32,9 +37,8 @@ p {
 
 /* Visible, consistent keyboard focus everywhere. */
 :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
-	outline: 2px solid var(--wp--preset--color--accent);
+	outline: 2px solid var(--wp--preset--color--earth);
 	outline-offset: 3px;
-	border-radius: 2px;
 }
 
 /* ---------- Header ---------- */
@@ -44,7 +48,7 @@ p {
 	top: 0;
 	z-index: 50;
 	isolation: isolate;
-	border-bottom: 1px solid color-mix(in srgb, var(--wp--preset--color--contrast) 8%, transparent);
+	border-bottom: 1px solid color-mix(in srgb, var(--wp--preset--color--clay) 25%, transparent);
 }
 
 /*
@@ -56,7 +60,7 @@ p {
 	position: absolute;
 	inset: 0;
 	z-index: -1;
-	background-color: color-mix(in srgb, var(--wp--preset--color--base) 92%, transparent);
+	background-color: color-mix(in srgb, var(--wp--preset--color--pearl) 94%, transparent);
 	backdrop-filter: saturate(140%) blur(10px);
 	-webkit-backdrop-filter: saturate(140%) blur(10px);
 }
@@ -71,13 +75,24 @@ p {
 	}
 }
 
-.flourish-header .wp-block-site-logo img {
-	max-height: 56px;
-	width: auto;
+/* Logo images: never stretched (brand rule), sized by width only. */
+.flourish-logo {
+	margin: 0;
+	flex-shrink: 0;
 }
 
-/* Hide the header booking button on small screens; it's in the menu overlay instead. */
+.flourish-logo img {
+	height: auto !important;
+	max-width: 100%;
+	display: block;
+}
+
 @media (max-width: 599px) {
+	.flourish-header .flourish-logo img {
+		width: 170px !important;
+	}
+
+	/* The booking button moves into the menu overlay on small screens. */
 	.flourish-header .flourish-header__cta {
 		display: none;
 	}
@@ -85,8 +100,8 @@ p {
 
 /* Mobile navigation overlay. */
 .wp-block-navigation__responsive-container.is-menu-open {
-	background-color: var(--wp--preset--color--base) !important;
-	color: var(--wp--preset--color--contrast) !important;
+	background-color: var(--wp--preset--color--blush) !important;
+	color: var(--wp--preset--color--earth) !important;
 	padding: var(--wp--preset--spacing--40);
 }
 
@@ -94,16 +109,21 @@ p {
 	gap: 1.25rem;
 }
 
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+	align-items: flex-start !important;
+}
+
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item {
 	font-family: var(--wp--preset--font-family--heading);
 	font-size: var(--wp--preset--font-size--x-large);
-	font-weight: 400;
+	letter-spacing: 0;
+	text-transform: none;
 }
 
 .wp-block-navigation__responsive-container-open,
 .wp-block-navigation__responsive-container-close {
 	padding: 0.5rem;
-	border-radius: var(--wp--custom--radius--small);
 }
 
 .wp-block-navigation__responsive-container-open svg,
@@ -114,44 +134,41 @@ p {
 
 /* ---------- Announcement bar ---------- */
 
+.flourish-announcement p {
+	letter-spacing: 0.04em;
+}
+
 .flourish-announcement a {
 	color: inherit;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 /* ---------- Block style variations ---------- */
 
-/* Card */
+/* Card: white on brand backgrounds with a hairline Dune border. */
 .is-style-flourish-card {
 	background-color: var(--wp--preset--color--white);
-	border-radius: var(--wp--custom--radius--medium);
-	box-shadow: var(--wp--preset--shadow--soft);
+	border: 1px solid var(--wp--preset--color--dune);
 	padding: var(--wp--preset--spacing--40);
-	transition: box-shadow 0.25s ease, transform 0.25s ease;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .is-style-flourish-card:has(a:hover),
 .is-style-flourish-card:focus-within {
-	box-shadow: var(--wp--preset--shadow--lifted);
-	transform: translateY(-2px);
+	border-color: var(--wp--preset--color--terra);
+	box-shadow: var(--wp--preset--shadow--soft);
 }
 
-/* Rounded panel (coloured sections) */
+/* Rounded panel (kept subtle to stay on brand). */
 .is-style-flourish-panel {
-	border-radius: var(--wp--custom--radius--large);
+	border-radius: var(--wp--custom--radius--medium);
 	overflow: hidden;
 }
 
-/* Arch-topped image, a nod to opening, growth and shelter. */
+/* Arch-topped image. */
 .wp-block-image.is-style-flourish-arch img,
 .wp-block-image.is-style-flourish-arch .components-resizable-box__container {
-	border-radius: 999px 999px var(--wp--custom--radius--medium) var(--wp--custom--radius--medium);
-}
-
-/* Organic leaf-like corners. */
-.wp-block-image.is-style-flourish-organic img,
-.wp-block-image.is-style-flourish-organic .components-resizable-box__container {
-	border-radius: 48% 8% 48% 8% / 32% 8% 32% 8%;
+	border-radius: 999px 999px 0 0;
 }
 
 .wp-block-cover.is-style-flourish-rounded {
@@ -159,28 +176,56 @@ p {
 	overflow: hidden;
 }
 
-/* Eyebrow label above headings */
+/* Photo frame: full-width image, no rounding. */
+.flourish-photo img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Subheader: Poppins caps (brand "subheader" style). */
 .is-style-flourish-eyebrow {
 	font-family: var(--wp--preset--font-family--body) !important;
 	font-size: 0.8125rem !important;
-	font-weight: 700 !important;
-	letter-spacing: 0.16em !important;
-	line-height: 1.4 !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.1em !important;
+	line-height: 1.5 !important;
 	text-transform: uppercase;
-	color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--terra-text);
 	font-style: normal !important;
 }
 
-.has-primary-background-color .is-style-flourish-eyebrow,
-.has-primary-dark-background-color .is-style-flourish-eyebrow,
-.has-dusk-gradient-background .is-style-flourish-eyebrow {
-	color: var(--wp--preset--color--accent-light);
+/* On Dune, Terra-tinted text loses contrast; switch to Earth. */
+.has-dune-background-color .is-style-flourish-eyebrow,
+.has-terra-background-color .is-style-flourish-eyebrow,
+.has-clay-background-color .is-style-flourish-eyebrow {
+	color: var(--wp--preset--color--earth);
+}
+
+.is-style-flourish-eyebrow a {
+	color: inherit;
+	text-decoration: none;
 }
 
 /* Lead paragraph */
 .is-style-flourish-lead {
 	font-size: var(--wp--preset--font-size--large);
-	line-height: 1.55;
+	line-height: 1.65;
+}
+
+/* Accent: Cormorant Garamond Italic for quotes and special occasions. */
+.is-style-flourish-accent {
+	font-family: var(--wp--preset--font-family--accent) !important;
+	font-style: italic;
+	font-weight: 400;
+	font-size: clamp(1.625rem, 3.2vw, 2.375rem);
+	line-height: 1.3;
+}
+
+.flourish-signoff {
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	font-weight: 500;
 }
 
 /* Checkmark list */
@@ -199,43 +244,45 @@ p {
 	content: "";
 	position: absolute;
 	left: 0;
-	top: 0.3em;
+	top: 0.35em;
 	width: 1.15rem;
 	height: 1.15rem;
 	border-radius: 50%;
-	background-color: var(--wp--preset--color--secondary-light);
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%235E7356' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round' d='M5.5 10.5l3 3 6-7'/%3E%3C/svg%3E");
+	background-color: var(--wp--preset--color--dune);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23422921' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M5.5 10.5l3 3 6-7'/%3E%3C/svg%3E");
 	background-size: 100%;
 }
 
-/* Soft button: tinted background, dark text */
+/* Soft button: Blush background, Earth text. */
 .wp-block-button.is-style-flourish-soft .wp-block-button__link {
-	background-color: var(--wp--preset--color--accent-light);
-	color: var(--wp--preset--color--primary-dark);
+	background-color: var(--wp--preset--color--blush);
+	color: var(--wp--preset--color--earth);
 }
 
 .wp-block-button.is-style-flourish-soft .wp-block-button__link:hover {
-	background-color: var(--wp--preset--color--secondary-light);
-	color: var(--wp--preset--color--primary-dark);
+	background-color: var(--wp--preset--color--dune);
+	color: var(--wp--preset--color--earth);
 }
 
-/* Outline button refinements */
+/* Outline button */
 .wp-block-button.is-style-outline .wp-block-button__link {
-	border: 1.5px solid currentColor;
+	border: 1px solid currentColor;
 	background: transparent;
-	padding: calc(0.85rem - 1.5px) calc(1.75rem - 1.5px);
+	padding: calc(0.95rem - 1px) calc(2rem - 1px);
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link:hover {
-	background-color: color-mix(in srgb, currentColor 8%, transparent);
+	background-color: var(--wp--preset--color--earth);
+	border-color: var(--wp--preset--color--earth);
+	color: var(--wp--preset--color--pearl) !important;
 }
 
-/* Sprig separator */
-.wp-block-separator.is-style-flourish-sprig {
+/* Monogram separator: the FIF monogram between two hairlines. */
+.wp-block-separator.is-style-flourish-monogram {
 	border: 0 !important;
-	height: 28px;
-	max-width: 120px !important;
-	width: 120px;
+	height: 26px;
+	max-width: 220px !important;
+	width: 220px;
 	margin-left: auto;
 	margin-right: auto;
 	background: none !important;
@@ -243,13 +290,41 @@ p {
 	position: relative;
 }
 
-.wp-block-separator.is-style-flourish-sprig::before {
+.wp-block-separator.is-style-flourish-monogram::before {
 	content: "";
 	position: absolute;
 	inset: 0;
-	background-color: var(--wp--preset--color--secondary);
-	-webkit-mask: url("../images/sprig.svg") center / contain no-repeat;
-	mask: url("../images/sprig.svg") center / contain no-repeat;
+	background: url("../images/logo/logo-monogram-clay.svg") center / contain no-repeat;
+}
+
+.wp-block-separator.is-style-flourish-monogram::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	height: 1px;
+	background: linear-gradient(to right, var(--wp--preset--color--clay) 0 34%, transparent 34% 66%, var(--wp--preset--color--clay) 66%);
+}
+
+/* Wordmark watermark: brand-approved subtle background graphic. */
+.flourish-watermark {
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+}
+
+.flourish-watermark::after {
+	content: "";
+	position: absolute;
+	left: -2%;
+	right: -2%;
+	bottom: -12%;
+	height: 48%;
+	z-index: -1;
+	background: url("../images/logo/logo-wordmark-white.svg") center bottom / 104% auto no-repeat;
+	opacity: 0.35;
+	pointer-events: none;
 }
 
 /* ---------- Components used in patterns ---------- */
@@ -261,8 +336,8 @@ p {
 	width: 3rem;
 	height: 3rem;
 	border-radius: 50%;
-	background-color: var(--wp--preset--color--accent-light);
-	color: var(--wp--preset--color--primary-dark);
+	background-color: var(--wp--preset--color--dune);
+	color: var(--wp--preset--color--earth);
 	font-family: var(--wp--preset--font-family--heading);
 	font-size: 1.25rem !important;
 	line-height: 1 !important;
@@ -293,29 +368,29 @@ p {
 	position: relative;
 }
 
+.flourish-stretch .wp-block-heading a {
+	color: inherit;
+	text-decoration: none;
+}
+
 .flourish-stretch .wp-block-heading a::after {
 	content: "";
 	position: absolute;
 	inset: 0;
 }
 
-/* Hero decorative backdrop */
-.flourish-hero {
-	position: relative;
-	overflow: hidden;
+.flourish-stretch .wp-block-heading a:hover {
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.2em;
 }
 
-.flourish-hero > * {
-	position: relative;
-	z-index: 1;
-}
-
-/* Accordion / details polish (FAQ) */
+/* Accordion / details (FAQ) */
 .wp-block-details summary {
 	cursor: pointer;
 	font-family: var(--wp--preset--font-family--heading);
 	font-size: var(--wp--preset--font-size--large);
-	color: var(--wp--preset--color--primary-dark);
+	color: var(--wp--preset--color--earth);
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
@@ -335,7 +410,7 @@ p {
 	width: 2rem;
 	height: 2rem;
 	border-radius: 50%;
-	background: var(--wp--preset--color--base-2);
+	background: var(--wp--preset--color--blush);
 	font-family: var(--wp--preset--font-family--body);
 	font-size: 1.25rem;
 	transition: transform 0.2s ease;
@@ -349,7 +424,7 @@ p {
 	margin-top: 0.75rem;
 }
 
-/* Footer links */
+/* Footer */
 .flourish-footer a {
 	text-decoration: none;
 }
@@ -361,12 +436,19 @@ p {
 .flourish-footer .wp-block-navigation .wp-block-navigation-item {
 	font-size: var(--wp--preset--font-size--medium);
 	font-weight: 400;
+	letter-spacing: 0;
+	text-transform: none;
 }
 
 /* Post cards */
 .flourish-post-card .wp-block-post-featured-image img {
 	aspect-ratio: 3 / 2;
 	object-fit: cover;
+}
+
+/* Post cards without a featured image still need top padding. */
+.flourish-post-card > .wp-block-group:first-child {
+	padding-top: var(--wp--preset--spacing--40);
 }
 
 /* Forms (comments, search, any form plugin) */
@@ -379,10 +461,10 @@ input[type="date"],
 select,
 textarea {
 	font: inherit;
-	color: var(--wp--preset--color--contrast);
+	color: var(--wp--preset--color--earth);
 	background-color: var(--wp--preset--color--white);
-	border: 1px solid #D8CCC0;
-	border-radius: var(--wp--custom--radius--small);
+	border: 1px solid var(--wp--preset--color--clay);
+	border-radius: 0;
 	padding: 0.7rem 0.9rem;
 	max-width: 100%;
 }
@@ -390,12 +472,11 @@ textarea {
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-	border-color: var(--wp--preset--color--primary);
+	border-color: var(--wp--preset--color--earth);
 }
 
 .wp-block-search__input {
-	border-radius: var(--wp--custom--radius--pill) !important;
-	padding-left: 1.25rem !important;
+	padding-left: 1rem !important;
 }
 
 .wp-block-search__button {
@@ -404,7 +485,6 @@ textarea:focus-visible {
 
 /* ---------- Responsive helpers ---------- */
 
-/* Reverse column order on mobile so images appear above text when desired. */
 @media (max-width: 781px) {
 	.flourish-reverse-mobile.wp-block-columns {
 		flex-direction: column-reverse;
@@ -429,53 +509,18 @@ textarea:focus-visible {
 		transition-duration: 0.01ms !important;
 		animation-duration: 0.01ms !important;
 	}
-
-	.is-style-flourish-card:has(a:hover),
-	.is-style-flourish-card:focus-within {
-		transform: none;
-	}
 }
 
 /* ---------- Print ---------- */
 
 @media print {
-	.flourish-header,
 	.flourish-announcement,
-	.wp-block-navigation {
-		position: static !important;
+	.flourish-header .wp-block-navigation,
+	.flourish-header__cta {
 		display: none !important;
 	}
-}
 
-/* Illustrations scale fluidly inside their column. */
-.wp-block-image.is-style-flourish-arch img,
-.wp-block-image.is-style-flourish-organic img {
-	width: 100%;
-	height: auto;
-}
-
-.flourish-stretch .wp-block-heading a {
-	color: inherit;
-	text-decoration: none;
-}
-
-.flourish-stretch .wp-block-heading a:hover {
-	text-decoration: underline;
-	text-decoration-thickness: 1px;
-	text-underline-offset: 0.2em;
-}
-
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content,
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
-	align-items: flex-start !important;
-}
-
-.is-style-flourish-eyebrow a {
-	color: inherit;
-	text-decoration: none;
-}
-
-/* Post cards without a featured image still need top padding. */
-.flourish-post-card > .wp-block-group:first-child {
-	padding-top: var(--wp--preset--spacing--40);
+	.flourish-header {
+		position: static;
+	}
 }

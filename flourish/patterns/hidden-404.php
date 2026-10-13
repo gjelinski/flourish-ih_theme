@@ -6,16 +6,16 @@
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"},"blockGap":"var:preset|spacing|30"}},"layout":{"type":"constrained","contentSize":"640px"}} -->
-<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)"><!-- wp:separator {"className":"is-style-flourish-sprig"} -->
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-flourish-sprig"/>
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)"><!-- wp:separator {"className":"is-style-flourish-monogram"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-flourish-monogram"/>
 <!-- /wp:separator -->
 
 <!-- wp:heading {"textAlign":"center","level":1,"fontSize":"xx-large"} -->
-<h1 class="wp-block-heading has-text-align-center has-xx-large-font-size">This page hasn't bloomed yet</h1>
+<h1 class="wp-block-heading has-text-align-center has-xx-large-font-size">We couldn't find that page</h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","textColor":"muted"} -->
-<p class="has-text-align-center has-muted-color has-text-color">The page you're looking for may have moved or no longer exists. Try a search, or head back home.</p>
+<!-- wp:paragraph {"align":"center","textColor":"clay-text"} -->
+<p class="has-text-align-center has-clay-text-color has-text-color">The page you're looking for may have moved or no longer exists. Try a search, or head back home.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search the site…","buttonText":"Search"} /-->

@@ -7,8 +7,8 @@
  * Viewport Width: 1400
  */
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|60"}}}} -->
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"pearl","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-pearl-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|60"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"36%"} -->
 <div class="wp-block-column" style="flex-basis:36%"><!-- wp:paragraph {"className":"is-style-flourish-eyebrow"} -->
 <p class="is-style-flourish-eyebrow">Questions</p>
@@ -18,8 +18,8 @@
 <h2 class="wp-block-heading">Good to know before your first visit</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textColor":"muted"} -->
-<p class="has-muted-color has-text-color">Can't find what you're looking for? <a href="/contact/">Get in touch</a> and our team will be happy to help.</p>
+<!-- wp:paragraph {"textColor":"clay-text"} -->
+<p class="has-clay-text-color has-text-color">Can't find what you're looking for? <a href="/contact/">Get in touch</a> and our team will be happy to help.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -52,7 +52,7 @@
 
 <!-- wp:details -->
 <details class="wp-block-details"><summary>Who do you care for?</summary><!-- wp:paragraph {"placeholder":"Type / to add a hidden block"} -->
-<p>We provide care for women, girls and gender-diverse people at every life stage. Our clinic is a safe, affirming space for everyone.</p>
+<p>Our focus is women in midlife and beyond, and we welcome people of all genders. Our clinic is a safe, affirming space for everyone.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 </div>
